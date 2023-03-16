@@ -69,8 +69,6 @@ public class WEBREQUEST : MonoBehaviour
     {
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(MediaUrl);
         yield return request.SendWebRequest();
-        /*if (request.isNetworkError || request.isHttpError)
-            Debug.Log(request.error);*/
         if (request.result != UnityWebRequest.Result.Success)
         {
             Debug.Log(request.error);
